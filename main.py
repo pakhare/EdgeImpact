@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 colab_url = None  # To store the Colab URL
 
 @app.route('/', methods=['GET'])
