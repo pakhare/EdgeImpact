@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Edge Device Network Simulation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Edge Impact</h1>
+        <h2>Power Saving in Network </h2><h2>using on device AI for Underserved Areas</h2>
+        <br>
+        <br>
+
+        <div class="input-section">
+
+            <label for="api-url">
+              To simulate an Edge Device,<br>
+              <a href="https://colab.research.google.com/drive/1HxHo-V-tuKOxqulv20_EVm82-W14Uxu-?usp=sharing">Go to this Colab Notebook</a>
+              follow the instructions and copy paste the generated URL here:</label><br>
+            <input type="text" id="api-url" placeholder="Enter API URL here" required /><br>
+            <button id="set-url-btn">Set URL</button>
+            <button id="simulate-btn" disabled>Start Simulation</button><br><br>
+        </div>
+
+        <div class="device-section">
+            <div class="iot-device">
+                <br><br>
+                <p id="device-status">Waiting to start simulation...</p>
+                <div id="spinner" class="spinner"></div>
+            </div>
+            <div class="power-visual">
+                <div id="power-bar-container">
+                    <div id="power-bar" class="power-bar">
+                      <p id="power-status">Power Adjustment: 0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="traffic-info">
+            <p id="traffic-stats">No traffic data yet</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  gap: 40px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #097bfe;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #7db8fb;
+}
+
+button {
+  background-color: #3593ff;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7db8fb;
+}
+
+.device-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  gap: 50px;
+}
+
+.iot-device, .power-visual {
+  width: 48%;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.power-bar {
+  width: 0;
+  height: 50px;
+  background-color: #27ae60;
+  border-radius: 5px;
+  padding: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+#power-bar-container {
+  background-color: #ddd;
+  border-radius: 5px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.traffic-info {
+  margin-top: 30px;
+}
+
+.traffic-info p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#power-status {
+  color: white;
+}
